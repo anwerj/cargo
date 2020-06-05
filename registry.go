@@ -7,6 +7,7 @@ import (
 	"my/install"
 	"my/jsonnet"
 	"my/prime_factors"
+	"my/rsa"
 	"my/strings"
 )
 
@@ -18,6 +19,7 @@ func registry() map[string] func(h god.Hand) {
 		"install" : install.Main,
 		"jsonnet" : jsonnet.Main,
 		"prime_factors" : prime_factors.Main,
+		"rsa" : rsa.Main,
 		"strings" : strings.Main,
 	}
 

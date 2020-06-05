@@ -15,14 +15,14 @@ type Logger struct {
 
 // NewLogger ...NewLogger
 func NewLogger() Logger {
-	return Logger{d: "/var/log/go/mygod.log", s:1}
+	return Logger{d: "/var/log/go/mygod.log", s: 1}
 }
 
+// SetSkip ...SetSkip
 func (l *Logger) SetSkip(i int) *Logger {
 	l.s = i
 	return l
 }
-
 
 // Info ...Info
 func (l *Logger) Info(a ...interface{}) {
@@ -31,7 +31,7 @@ func (l *Logger) Info(a ...interface{}) {
 	c, err := f.WriteString(fmt.Sprintf("\n>> %s:%d\n   ", file, no))
 	b, err := json.Marshal(a)
 	if err == nil {
-		if _,err := f.Write(b); err == nil {
+		if _, err := f.Write(b); err == nil {
 		}
 	} else {
 		fmt.Println(err, ok, c)
