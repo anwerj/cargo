@@ -2,7 +2,8 @@ package prime_factors
 
 import (
 	"fmt"
-	"my/god"
+
+	"github.com/anwerj/MyGod/god"
 )
 
 const lineBreaker = "\n*********************************************************\n"

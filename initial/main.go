@@ -2,7 +2,8 @@ package initial
 
 import (
 	"fmt"
-	"my/god"
+
+	"github.com/anwerj/MyGod/god"
 )
 
 // Main of Initial

@@ -2,7 +2,8 @@ package jsonnet
 
 import (
 	"fmt"
-	"my/god"
+
+	"github.com/anwerj/MyGod/god"
 )
 
 func Main(h god.Hand) {

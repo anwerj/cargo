@@ -3,7 +3,8 @@ package hocon
 import (
 	"encoding/json"
 	"fmt"
-	"my/god"
+
+	"github.com/anwerj/MyGod/god"
 )
 
 type config struct {

@@ -3,7 +3,8 @@ package install
 import (
 	"fmt"
 	"io/ioutil"
-	"my/god"
+
+	"github.com/anwerj/MyGod/god"
 )
 
 // Main of install
@@ -28,7 +29,7 @@ func fileContent(dirs []string) []byte {
 		"import (\n"
 
 	for _, dir := range dirs {
-		text += "\t\"my/" + dir + "\"\n"
+		text += "\t\"github.com/anwerj/MyGod/" + dir + "\"\n"
 	}
 
 	text += ")\n\n" +

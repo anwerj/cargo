@@ -1,8 +1,9 @@
 package main
 
 import (
-	"my/god"
 	"os"
+
+	"github.com/anwerj/MyGod/god"
 )
 
 func main() {
