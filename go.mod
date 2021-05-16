@@ -1,6 +1,6 @@
 module github.com/anwerj/MyGod
 
-go 1.14
+go 1.16
 
 require (
 	github.com/abiosoft/ishell v2.0.0+incompatible
