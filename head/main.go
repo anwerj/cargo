@@ -4,8 +4,6 @@ import (
 	"fmt"
 )
 
-const welcomeMessage = "Yes my child! You have reached to the "
-
 // Aid holds everything needed in project, for all dependencies just talk to hand
 type Aid struct {
 	O Output
@@ -17,8 +15,9 @@ type Aid struct {
 
 // Main func for Hand, Inly Greets
 func Main(a Aid) {
-	fmt.Print(welcomeMessage)
-	a.O.Red("\"God\"")
+	fmt.Print("Yes my friend! You have reached to the ")
+	a.O.WoutLB().Blue("\"Head\"")
+	fmt.Print(" of the cargo.\n")
 }
 
 // Call will return in God's Hand

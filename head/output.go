@@ -26,6 +26,15 @@ func (O *Output) Error(format string, a ...interface{}) {
 	fmt.Println(f, d)
 }
 
+// Red prints red output
+func (O *Output) Red(format string, a ...interface{}) {
+	if O.lb {
+		color.Red(format, a...)
+		return
+	}
+	fmt.Print(color.RedString(format))
+}
+
 // Green prints  green output
 func (O *Output) Green(format string, a ...interface{}) {
 	if O.lb {
@@ -35,13 +44,13 @@ func (O *Output) Green(format string, a ...interface{}) {
 	fmt.Print(color.GreenString(format))
 }
 
-// Red prints red output
-func (O *Output) Red(format string, a ...interface{}) {
+// Blue prints  blue output
+func (O *Output) Blue(format string, a ...interface{}) {
 	if O.lb {
-		color.Red(format, a...)
+		color.Cyan(format, a...)
 		return
 	}
-	fmt.Print(color.RedString(format))
+	fmt.Print(color.CyanString(format))
 }
 
 // WithLB will ask output to line break
