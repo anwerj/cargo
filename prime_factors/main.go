@@ -3,23 +3,23 @@ package prime_factors
 import (
 	"fmt"
 
-	"github.com/anwerj/MyGod/god"
+	"github.com/anwerj/cargo/head"
 )
 
 const lineBreaker = "\n*********************************************************\n"
 
 // Main of Prime Factors
-func Main(h god.Hand) {
+func Main(a head.Aid) {
 
-	c := h.I.ExpectStr(2, h.I.MultiChoice([]string{"recursive", "iterative"}, "Enter the Mode"))
-	t := h.I.ExpectInt(3, h.I.Int("Enter the integer"))
+	c := a.I.ExpectStr(2, a.I.MultiChoice([]string{"recursive", "iterative"}, "Enter the Mode"))
+	t := a.I.ExpectInt(3, a.I.Int("Enter the integer"))
 
 	fmt.Println("\nWe are now starting Prime Factorization in Mode", c, "for", t)
 
 	var listy []int // Will always be empty as it is passed empty
 	var frist []int
 	var prist []int
-	misty := god.NewSmap()
+	misty := head.NewSmap()
 	misty.SetPad("%4s => ")
 
 	for i := 2; i <= t; i++ {
@@ -37,7 +37,7 @@ func Main(h god.Hand) {
 		}
 	}
 
-	h.O.Boxes(map[string]interface{}{
+	a.O.Boxes(map[string]interface{}{
 		"Count of Factors":  misty, //h.U.SortByKeys(misty, h.O.SprintKV, "%4s => "),
 		"All prime numbers": prist,
 	})

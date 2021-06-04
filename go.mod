@@ -1,4 +1,4 @@
-module github.com/anwerj/MyGod
+module github.com/anwerj/cargo
 
 go 1.16
 

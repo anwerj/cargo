@@ -3,9 +3,9 @@ package jsonnet
 import (
 	"fmt"
 
-	"github.com/anwerj/MyGod/god"
+	"github.com/anwerj/cargo/head"
 )
 
-func Main(h god.Hand) {
+func Main(a head.Aid) {
 	fmt.Println("Welcome to Jay Sonnet!")
 }

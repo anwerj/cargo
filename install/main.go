@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"github.com/anwerj/MyGod/god"
+	"github.com/anwerj/cargo/head"
 )
 
 // Main of install
-func Main(h god.Hand) {
-	dirs := h.S.ReadDir(".")
+func Main(a head.Aid) {
+	dirs := a.S.ReadDir(".")
 
 	con := fileContent(dirs)
 
@@ -29,12 +29,12 @@ func fileContent(dirs []string) []byte {
 		"import (\n"
 
 	for _, dir := range dirs {
-		text += "\t\"github.com/anwerj/MyGod/" + dir + "\"\n"
+		text += "\t\"github.com/anwerj/cargo/" + dir + "\"\n"
 	}
 
 	text += ")\n\n" +
-		"func registry() map[string] func(h god.Hand) {\n" +
-		"\tflist := map[string]func(h god.Hand) {\n"
+		"func registry() map[string] func(a head.Aid) {\n" +
+		"\tflist := map[string]func(a head.Aid) {\n"
 
 	for _, dir := range dirs {
 		text += "\t\t\"" + dir + "\" : " + dir + ".Main,\n"
