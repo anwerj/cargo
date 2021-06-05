@@ -1,4 +1,4 @@
-package prime_factors
+package primefactors
 
 import (
 	"fmt"
