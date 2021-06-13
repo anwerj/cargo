@@ -1,4 +1,4 @@
-package head
+package utils
 
 import (
 	"fmt"

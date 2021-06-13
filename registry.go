@@ -10,15 +10,15 @@ import (
 	"github.com/anwerj/cargo/strings"
 )
 
-func registry() map[string]func(a head.Aid) {
-	flist := map[string]func(a head.Aid){
-		"head":         head.Main,
-		"hocon":        hocon.Main,
-		"initial":      initial.Main,
-		"install":      install.Main,
-		"jsonnet":      jsonnet.Main,
-		"primefactors": primefactors.Main,
-		"strings":      strings.Main,
+func registry() map[string] func(a head.Aid) {
+	flist := map[string]func(a head.Aid) {
+		"head" : head.Main,
+		"hocon" : hocon.Main,
+		"initial" : initial.Main,
+		"install" : install.Main,
+		"jsonnet" : jsonnet.Main,
+		"primefactors" : primefactors.Main,
+		"strings" : strings.Main,
 	}
 
 	return flist

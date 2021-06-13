@@ -1,4 +1,4 @@
-package head
+package input
 
 import (
 	"fmt"
@@ -15,7 +15,7 @@ type Input struct {
 }
 
 // NewInput creates a fresh Input with Dependencies
-func NewInput() Input {
+func New() Input {
 	return Input{i: ishell.New(), a: 1}
 }
 

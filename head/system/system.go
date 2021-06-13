@@ -1,4 +1,4 @@
-package head
+package system
 
 import (
 	"fmt"
@@ -12,7 +12,7 @@ import (
 type System struct{}
 
 // NewSystem returns new system
-func NewSystem() System {
+func New() System {
 	return System{}
 }
 

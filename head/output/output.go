@@ -1,4 +1,4 @@
-package head
+package output
 
 import (
 	"fmt"
@@ -16,7 +16,7 @@ type Output struct {
 }
 
 // NewOutput will return the OutPut
-func NewOutput() Output {
+func New() Output {
 	return Output{color: color.New(), lb: true}
 }
 

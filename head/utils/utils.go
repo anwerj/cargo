@@ -1,4 +1,4 @@
-package head
+package utils
 
 import (
 	"fmt"
@@ -9,7 +9,7 @@ import (
 type Utils struct{}
 
 // NewUtils returns new util
-func NewUtils() Utils {
+func New() Utils {
 	return Utils{}
 }
 

@@ -19,7 +19,7 @@ func Main(a head.Aid) {
 	var listy []int // Will always be empty as it is passed empty
 	var frist []int
 	var prist []int
-	misty := head.NewSmap()
+	misty := a.U.Smap()
 	misty.SetPad("%4s => ")
 
 	for i := 2; i <= t; i++ {
