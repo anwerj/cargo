@@ -13,7 +13,7 @@ func main() {
 	if len(os.Args) > 1 {
 		ch = os.Args[1]
 		if ch[:1] == "/" {
-
+			//ch = ch[]
 		}
 	}
 

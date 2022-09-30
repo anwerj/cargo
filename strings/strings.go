@@ -18,7 +18,7 @@ func Main(a head.Aid) {
 	c := a.I.ExpectStr(a.I.A(), a.I.Str("Please enter the command/string"))
 
 	f, ok := c2f[c]
-	if ok == false {
+	if ok {
 		f = def
 	} else {
 		c = a.I.ExpectStr(a.I.A(), a.I.Str("Please enter the string"))
@@ -45,7 +45,7 @@ func strslice(a head.Aid, s string) {
 	var ps string
 	var pl, pr int
 	var err error
-	for true {
+	for {
 		ps = a.I.Str("Enter the left,right points: 0, " + strconv.Itoa(len(s)))()
 		pl, pr = 0, len(s)
 		pps := strings.Split(ps, ",")

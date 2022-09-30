@@ -35,8 +35,7 @@ func (I *Input) Args(i int) string {
 }
 
 // MultiChoice will return as function to str
-func (I *Input) MultiChoice(cs []string, q string) (
-	out func() (s string)) {
+func (I *Input) MultiChoice(cs []string, q string) func() (s string) {
 
 	return func() (s string) {
 		s = cs[I.i.MultiChoice(cs, q)]
@@ -45,8 +44,7 @@ func (I *Input) MultiChoice(cs []string, q string) (
 }
 
 // Int will ask to enter integer
-func (I *Input) Int(m string) (
-	out func() (i int)) {
+func (I *Input) Int(m string) func() (i int) {
 
 	return func() (i int) {
 
@@ -64,8 +62,7 @@ func (I *Input) Int(m string) (
 }
 
 // Str will ask to enter the string
-func (I *Input) Str(m string) (
-	out func() (s string)) {
+func (I *Input) Str(m string) func() string {
 
 	return func() (s string) {
 		fmt.Println(m)
