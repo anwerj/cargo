@@ -2,3 +2,4 @@
 .vscode/
 rsa/main.go
 cargo
+.env/

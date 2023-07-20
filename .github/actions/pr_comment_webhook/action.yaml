@@ -1,0 +1,5 @@
+name: "Send PR comment"
+description: "Send PR comment"
+runs:
+  using: "docker"
+  image: "Dockerfile"
