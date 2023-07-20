@@ -1,0 +1,16 @@
+name: PUSH PR
+on:
+  pull_request:
+    types: [ closed ]
+    branches:
+      - master
+jobs:
+  update-eagleye:
+    if: github.event.pull_request.merged == true
+    runs-on: [ubuntu-latest]
+    ## Restrict trigger, only when a comment is added on a pull request
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v2
+      - name: PUSH PR
+        uses: ./.github/actions/pr_merge_webhook
