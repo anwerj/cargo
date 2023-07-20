@@ -6,4 +6,4 @@ COPY requirements.txt ./
 COPY push.py ./
 RUN pip install --no-cache-dir -r requirements.txt
 
-CMD [ "python", "push.py" ]
+CMD [ "python", "/usr/src/app/push.py" ]
