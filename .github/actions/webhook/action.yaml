@@ -1,0 +1,9 @@
+name: "Send Github Event"
+description: "Send Github Event"
+inputs:
+  event_name:
+    description: 'Avoid event calculation logic'
+    required: true
+runs:
+  using: node16
+  main: index.js
