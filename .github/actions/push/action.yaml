@@ -1,0 +1,5 @@
+name: "Send Github Event"
+description: "Send Github Event"
+runs:
+  using: "docker"
+  image: "Dockerfile"

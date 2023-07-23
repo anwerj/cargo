@@ -1,5 +1,0 @@
-name: "Send PR merge"
-description: "Send PR merge"
-runs:
-  using: "docker"
-  image: "Dockerfile"
