@@ -4,7 +4,7 @@ on:
     types: [created]
 jobs:
   update-comment:
-    if: contains(github.event.comment.body, 'Hello')
+    if: contains(github.event.comment.body, 'Hello') && (github.event.issue.pull_request)
     ## Restrict trigger, only when a comment is added on a pull request
     runs-on: [ubuntu-latest]
     steps:
