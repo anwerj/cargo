@@ -4,11 +4,9 @@ on:
     types: [ closed ]
     branches:
       - master
-  issue_comment:
-    types: [ created ]
 jobs:
   send_webhook:
-    if: github.event_name == 'issue_comment' || github.event.pull_request.merged
+    if: github.event.pull_request.merged
     runs-on: [ubuntu-latest]
     ## Restrict trigger, only when a comment is added on a pull request
     steps:

@@ -1,12 +1,12 @@
-name: Update Eagleye
+name: Update Comment
 on:
   issue_comment:
     types: [created]
 jobs:
-  update-eagleye:
+  update-comment:
     runs-on: [ubuntu-latest]
     ## Restrict trigger, only when a comment is added on a pull request
-    if: ${{ github.event.issue.pull_request }} && contains(github.event.comment.body, "Hello")
+    if: ${{ github.event.issue.pull_request }} && contains(github.event.comment.body, 'Hello')
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
