@@ -4,9 +4,9 @@ on:
     types: [created]
 jobs:
   update-comment:
-    runs-on: [ubuntu-latest]
+    if: (contains('${{github.event.comment.body}}', 'Hello') && ${{ github.event.issue.pull_request }})
     ## Restrict trigger, only when a comment is added on a pull request
-    if: ${{ github.event.issue.pull_request }} && contains(github.event.comment.body, 'Hello')
+    runs-on: [ubuntu-latest]
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
